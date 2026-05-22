@@ -1,0 +1,306 @@
+🚀 Features
+1. Password Strength Checker
+
+Analyze existing passwords and determine security level.
+
+Checks:
+
+Minimum password length
+Uppercase characters
+Lowercase characters
+Numeric values
+Special symbols
+
+Example:
+
+Password: hello123
+
+Strength: Medium
+
+Meter:
+[██████░░░░] 60%
+
+Suggestions:
+• Add uppercase letters
+• Add special characters
+2. Password Generator
+
+Generate passwords based on user preferences.
+
+Custom options:
+
+✔ Password Length (8–20)
+✔ Include Numbers
+✔ Include Uppercase Letters
+✔ Include Special Characters
+
+Example:
+
+Generated Password:
+
+K#v81Mn!pq
+
+Strength:
+Strong
+
+Meter:
+[██████████] 100%
+3. Strength Meter
+
+Visual security indicator.
+
+Example:
+
+Weak
+[████░░░░░░] 40%
+
+Medium
+[██████░░░░] 60%
+
+Strong
+[██████████] 100%
+🧠 Logic Used In This Project
+
+This project uses a rule-based password evaluation algorithm.
+
+Instead of machine learning, the logic focuses on industry-standard password requirements.
+
+Step 1 → Password Length Validation
+if len(password) >= 8:
+    score += 1
+Why?
+
+Long passwords increase:
+
+Entropy
+Search space
+Brute-force resistance
+
+Short passwords are easier to crack.
+
+Step 2 → Uppercase Detection
+re.search(r"[A-Z]", password)
+Why?
+
+Uppercase characters:
+
+Increase combinations
+Improve complexity
+Reduce predictability
+
+Example:
+
+password ❌
+Password ✅
+Step 3 → Lowercase Detection
+re.search(r"[a-z]", password)
+Why?
+
+Mixing character sets improves randomness.
+
+Step 4 → Number Detection
+re.search(r"\d", password)
+Why?
+
+Numbers expand attack complexity.
+
+Example:
+
+hello
+↓
+
+hello123
+Step 5 → Special Character Detection
+re.search(r"[!@#$%^&*(),.?\":{}|<>]")
+Why?
+
+Special symbols greatly increase possible combinations.
+
+Example:
+
+Password123
+
+↓
+
+P@ssw0rd#123
+Step 6 → Score Calculation
+
+Each successful rule:
+
++1 Point
+
+Total:
+
+5 Points Maximum
+
+Classification:
+
+0–2 → Weak
+
+3–4 → Medium
+
+5 → Strong
+Step 7 → Secure Password Generation
+
+Generator logic:
+
+random.choice()
+
+Used to:
+
+Select random characters
+Build unpredictable passwords
+Avoid repetitive patterns
+
+Generated password loops until:
+
+Score ≥ 3
+
+This ensures generated passwords meet minimum strength requirements.
+
+⚙️ Project Flow
+START
+ ↓
+Display Menu
+ ↓
+Choose Option
+ ↓
+ ┌──────────────┐
+ │ Check        │
+ │ Password     │
+ └──────┬───────┘
+        ↓
+Evaluate Rules
+        ↓
+Calculate Score
+        ↓
+Show Meter
+        ↓
+Suggestions
+
+
+OR
+
+
+Generate Password
+        ↓
+User Preferences
+        ↓
+Generate Random
+        ↓
+Validate
+        ↓
+Display Result
+🏗 Project Structure
+password-strength-checker/
+
+│
+├── passwordchecker.py
+├── README.md
+├── requirements.txt
+└── screenshots/
+📥 Installation
+
+Clone repository:
+
+git clone https://github.com/YOUR_USERNAME/password-strength-checker.git
+
+Move into folder:
+
+cd password-strength-checker
+
+Run:
+
+python3 passwordchecker.py
+📦 Requirements
+
+Install Python:
+
+sudo apt install python3
+
+Libraries:
+
+re
+random
+string
+
+(No external dependencies required)
+
+🖥 Example Usage
+==================================================
+PASSWORD STRENGTH CHECKER & GENERATOR
+==================================================
+
+1 → Check Password
+2 → Generate Password
+3 → Exit
+🌍 Real World Applications
+
+This project can be useful in:
+
+🔹 User Registration Systems
+
+Validate passwords before account creation.
+
+🔹 Enterprise Security
+
+Enforce stronger employee passwords.
+
+🔹 Security Awareness Training
+
+Teach users password best practices.
+
+🔹 Cybersecurity Learning
+
+Understand password entropy concepts.
+
+🔹 Personal Password Hygiene
+
+Generate secure credentials.
+
+📈 Future Improvements
+
+Ideas for Version 2:
+
+GUI Version (Tkinter / PyQt)
+Password Entropy Calculator
+Password Breach API Check
+Dark Mode UI
+Password History
+Export Password
+Clipboard Copy
+AI-Based Suggestions
+Password Storage Vault
+QR Export
+🛡 Security Note
+
+This project is for:
+
+✔ Education
+✔ Security Awareness
+✔ Learning Python
+
+Generated passwords should not replace dedicated password managers for highly sensitive environments.
+
+👨‍💻 Author
+Rishikesh Borah
+
+BCA Student • Ethical Hacking Enthusiast • Security Research Learner
+
+Skills:
+
+Python
+C / C++
+Java
+HTML / CSS
+Linux
+Cybersecurity
+TryHackMe
+⭐ Support
+
+If you found this useful:
+
+⭐ Star the Repository
+🍴 Fork It
+🧠 Improve It
+🚀 Build More
