@@ -1,0 +1,29 @@
+🔐 Password Strength Checker & Generator
+Built with Python • Created by Rishikesh Borah
+
+A beginner-friendly yet practical cybersecurity utility that helps users analyze password security and generate stronger passwords automatically.
+Designed for learning, security awareness, and real-world password hygiene.
+
+Based on your uploaded project file
+
+📌 Overview
+
+Passwords are the first line of defense in cybersecurity.
+
+Weak passwords are one of the biggest causes of:
+
+Account compromise
+Credential stuffing attacks
+Brute-force attacks
+Dictionary attacks
+Data leaks
+
+This project solves that problem by combining:
+
+✅ Password Strength Analysis
+✅ Secure Password Generation
+✅ Security Feedback System
+✅ Interactive CLI Experience
+✅ Visual Strength Meter
+
+Instead of simply saying strong or weak, the tool explains WHY a password is weak and HOW to improve it.
